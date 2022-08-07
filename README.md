@@ -62,7 +62,7 @@ Do YoU eVeN lIfT bRo?
 To install this module, simply run:
 
 ```shell
-$ go get github.com/onedr0p/mockbob
+$ go install github.com/onedr0p/mockbob
 
 # mockbob is now available in your terminal
 $ which mockbob
