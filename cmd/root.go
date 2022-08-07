@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"os"
 
+	"github.com/onedr0p/mockbob/internal"
 	"github.com/spf13/cobra"
-	"github.com/tlkamp/mockbob/internal"
 )
 
 var (

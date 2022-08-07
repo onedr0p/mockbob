@@ -1,32 +1,31 @@
-# This is an example goreleaser.yaml file with some sane defaults.
-# Make sure to check the documentation at http://goreleaser.com
-before:
-  hooks:
-    # You may remove this if you don't use go modules.
-    - go mod download
-builds:
-- id: custom-build
-  env:
-  - CGO_ENABLED=0
-  ldflags:
-    - -X 'github.com/tlkamp/mockbob/cmd.buildDate={{.Env.Date}}'
-    - -X 'github.com/tlkamp/mockbob/cmd.versionInfo={{.Version}}'
-    - -X 'github.com/tlkamp/mockbob/cmd.gitRev={{.Env.Rev}}'
-
+---
+project_name: mockbob
 archives:
-- replacements:
-    darwin: Darwin
-    linux: Linux
-    windows: Windows
-    386: i386
-    amd64: x86_64
-checksum:
-  name_template: 'checksums.txt'
-snapshot:
-  name_template: "{{ .Tag }}-next"
-changelog:
-  sort: asc
-  filters:
-    exclude:
-    - '^docs:'
-    - '^test:'
+  - id: main
+    wrap_in_directory: true
+    files:
+      - README.md
+builds:
+  - main: ./cmd
+    binary: mockbob
+    goarch:
+      - "386"
+      - amd64
+      - arm
+      - arm64
+    goos:
+      - darwin
+      - linux
+      - freebsd
+      - openbsd
+    ignore:
+      - goos: freebsd
+        goarch: arm
+      - goos: openbsd
+        goarch: arm
+      - goos: freebsd
+        goarch: arm64
+      - goos: openbsd
+        goarch: arm64
+    env:
+      - CGO_ENABLED=0

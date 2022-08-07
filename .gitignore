@@ -1,7 +1,0 @@
-**/*
-!**/*.go
-!**/*.md
-!**/
-!LICENSE
-!Makefile
-!.goreleaser.yml

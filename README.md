@@ -1,5 +1,3 @@
-[![CircleCI](https://circleci.com/gh/tlkamp/mockbob.svg?style=svg)](https://circleci.com/gh/tlkamp/mockbob) [![Go Report Card](https://goreportcard.com/badge/github.com/tlkamp/mockbob)](https://goreportcard.com/report/github.com/tlkamp/mockbob)
-
 # mockbob
 
 ![mascot](doc/gopher.png)
@@ -9,6 +7,7 @@ A CLI tool for generating Spongebob meme text.
 Because sometimes manually typing out that format takes too many braincells.
 
 ## Demo
+
 ![mockbob](https://user-images.githubusercontent.com/18516698/72223486-eed92080-3534-11ea-94df-b9d5ae48e43f.gif)
 
 ## Usage
@@ -63,7 +62,7 @@ Do YoU eVeN lIfT bRo?
 To install this module, simply run:
 
 ```shell
-$ go get github.com/tlkamp/mockbob
+$ go get github.com/onedr0p/mockbob
 
 # mockbob is now available in your terminal
 $ which mockbob
